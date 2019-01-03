@@ -477,8 +477,8 @@ static int const RCTVideoUnset = -1;
        */
       DebugLog(@"Caching is not supported for uri '%@' because text tracks are not compatible with the cache. Checkout https://github.com/react-native-community/react-native-video/blob/master/docs/caching.md", uri);
       [self playerItemForSourceUsingCache:uri assetOptions:assetOptions withCallback:handler];
-        AVURLAsset *asset = [AVURLAsset URLAssetWithURL:url options:@{AVURLAssetHTTPCookiesKey : cookies}];
-        return [AVPlayerItem playerItemWithAsset:asset];
+        
+      return;
     }
 #endif
 
